@@ -1,0 +1,160 @@
+/* CSS for modern-looking, responsive resume */
+
+/* Variables for easy color palette changes */
+:root {
+    --primary-bg-color: #f9f8f5;
+    /* off-white for a touch of warmth */
+    --secondary-bg-color: #f2f0ed;
+    /* #f2f0ed;*/
+    /* a secondary variation of off-white */
+    --primary-text-color: #2c2c59;
+    /* very dark blue */
+    --secondary-text-color: #595970;
+    /* lighter shade of the dark blue */
+    --accent-color: #ff6200;
+    /* a vibrant orange as a complementary color to blue */
+    --border-color: #dcdcdc;
+    /* a slightly darker gray for borders */
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.journey-header {}
+
+header,
+main,
+footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 6px;
+}
+
+h4 {
+    font-size: 1.25em;
+    margin-bottom: 5px;
+}
+
+h5 {
+    font-size: 1em;
+    margin-bottom: 4px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.position {
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1, 0.1);
+}
+
+
+
+
+
+
+
+
+.education,
+.sub-section {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    header,
+    main,
+    footer {
+        padding: 10px;
+    }
+
+    .article {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    h4 {
+        font-size: 0.9em;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+}
