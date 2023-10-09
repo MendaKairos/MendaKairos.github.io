@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zachary Ireland's Resume</title>
     <!-- Add your preferred CSS for styling here if needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js">
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -133,7 +135,6 @@
             <li>Adaptive Leadership</li>
             <li>Collaborative Approach</li>
             <li>Technical Mastery (Programming languages, tech tools, methodologies)</li>
-            <li>Problem-Solving Prowess</li>
             <li>Technical Proficiency (Dynamics NAV, SQL, ODATA)</li>
             <li>Database Management</li>
             <li>System Maintenance</li>
@@ -148,7 +149,29 @@
     <footer>
         <p>Contact References: Available upon request</p>
     </footer>
+    <button id="btn"> PDF MAKER </button>
 
+    <script>
+        var button = document.getElementById("btn");
+        button.addEventListener("click", function () {
+            var doc = new jsPDF({
+                orientation: 'portrait',
+                unit: 'mm',
+                format: 'letter' // Change this as needed, it defines the paper format. Letter is most common in the US.
+            });
+
+            // Use the 'html' method if using newer versions of jsPDF
+            doc.html(document.body, {
+                callback: function (doc) {
+                    doc.save("GFG.pdf");
+                },
+                x: 10, // starting X position
+                y: 10, // starting Y position
+                html2canvas: { scale: 0.95, logging: true } // scale: adjust this value to fit the content, logging is for debug
+            });
+        });
+
+    </script>
 </body>
 
 </html>

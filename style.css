@@ -28,14 +28,18 @@ body {
     font-size: 16px;
 }
 
-.journey-header {}
 
-header,
+.Experience-header,
+.education-header,
 main,
 footer {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+}
+
+main {
+    position: relative;
 }
 
 h1,
@@ -86,6 +90,8 @@ li {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0.1, 0.1);
+    position: relative;
+    z-index: 0
 }
 
 
@@ -157,4 +163,24 @@ footer {
     ul {
         padding-left: 15px;
     }
+}
+
+
+
+.journey-header {
+    background-color: #f0f0f0;
+    /* Add your desired background color */
+    width: 100%;
+    height: 300px;
+    /* Set to 75% to take up 3/4 of the page width */
+    margin-left: auto;
+    /* Auto margin on the left to center the header */
+    margin-right: auto;
+    /* Auto margin on the right to center the header */
+    padding: 20px;
+    /* Add padding to create space between the text and the expanded header */
+    box-sizing: border-box;
+    /* Include padding in the width calculation */
+    position: relative;
+    z-index: 1;
 }
